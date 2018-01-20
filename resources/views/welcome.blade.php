@@ -10,6 +10,23 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
+        <!-- ** USE BELOW CODES IF YOU NEED TRIGGER AUTH0 LOGIN WITH JS ** -->
+        <!-- <script src="https://cdn.auth0.com/js/auth0/9.0.0/auth0.min.js"></script> -->
+
+        <!-- <script type="text/javascript">
+            var webAuth = new auth0.WebAuth({
+                domain: {{ env('AUTH0_DOMAIN') }},
+                clientID: {{ env('AUTH0_CLIENT_ID') }}
+            });
+
+            function signin() {
+                webAuth.authorize({
+                    responseType: "code",
+                    redirectUri: {{ env('AUTH0_CALLBACK_URL') }}
+                });
+            }
+        </script> -->
+
         <!-- Styles -->
         <style>
             html, body {
@@ -69,10 +86,10 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/logout') }}">Logout</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
+                        <!-- <a onclick="window.signin();">Login</a> -->
+                        <a href="{{ url('/login') }}">Login</a>
                     @endauth
                 </div>
             @endif

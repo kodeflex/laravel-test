@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/login', ['as' => 'login', 'uses' => 'IndexController@login']);
+
+Route::get('/logout', ['as' => 'logout', 'uses' => function() {
+    Auth::logout();
+    return redirect('/');
+}])->middleware('auth');
+
+Route::get('/auth0/callback', '\Auth0\Login\Auth0Controller@callback');
