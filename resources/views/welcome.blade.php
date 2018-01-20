@@ -99,6 +99,22 @@
                     Laravel
                 </div>
 
+                <div>
+                    @if(Auth::guest())
+                        <p>You are loggedIn as a Guest.</p>
+                    @endif
+                </div>
+
+                <div>
+                    @if(Auth::check())
+                        <?php
+                            echo '<pre>';
+                            var_dump(Auth::user());
+                            echo '</pre>';
+                        ?>
+                    @endif
+                </div>
+
                 <div class="links">
                     <a href="https://laravel.com/docs">Documentation</a>
                     <a href="https://laracasts.com">Laracasts</a>
