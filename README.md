@@ -3,7 +3,7 @@
 ## Prerequisites
 
 - Install Laravel (https://laravel.com/docs/5.1#installation)
-- Install Laravel Homestead (https://laravel.com/docs/5.1/homestead)
+- Install Vagrant (https://www.vagrantup.com/)
 - Install VirtualBox (https://www.virtualbox.org/wiki/Downloads)
 
 ## Setup
@@ -13,7 +13,9 @@ git clone git@github.com:kodeflex/laravel-test.git
 cd laravel-test
 ```
 
-Run `npm i` (`composer install` runs in background as a `preinstall` npm script)
+Run `npm i` 
+
+>`composer install` runs in background as a `preinstall` npm script
 
 ## Start
 
