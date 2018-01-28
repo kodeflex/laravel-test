@@ -15,18 +15,26 @@ class UserController extends Controller
       return User::find($id);
     }
 
-    public function post(User $user) {
-      //
-      return [];
+    public function post(Request $request) {
+      $user = new User;
+      $user->name = $request->input('name');
+      $user->email = $request->input('email');
+      $user->password = $request->input('password');
+      
+      return $user->save();
     }
 
     public function put(User $user) {
-      //
-      return [];
+      $user = new User;
+      $user->name = $request->input('name');
+      $user->email = $request->input('email');
+      $user->password = $request->input('password');
+      
+      return $user->save();
     }
 
     public function delete($id) {
-      //
-      return [];
+      $user = User::find($id);
+      return $user->delete();
     }
 }
