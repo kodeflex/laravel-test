@@ -25,7 +25,7 @@ Run `npm i`
 
 ### Vagrant/Homestead
 
-- Run `npm run vagrant:init:<mac|windows>` command to initialize the devleopment environment
+- Run `npm run vagrant:init:<mac|win>` command to initialize the devleopment environment
 - Run `npm run vagrant` or `vagrant up` 
 - Run `npm run vagrant:destroy` or `vagrant destroy` to destroy the Vagrant env.
 
