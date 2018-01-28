@@ -17,6 +17,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::get('/auth', 'AuthController@auth')->middleware('auth.custom');
+Route::post('/auth', 'AuthController@auth')->middleware('auth.custom');
+
 Route::prefix('v1')->middleware('auth:api')->group(function () {
   Route::get('/users', 'UserController@getAll');
   Route::get('/users/{id}', 'UserController@getOne');
