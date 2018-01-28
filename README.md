@@ -55,7 +55,7 @@ See `routes/api.php` for sample routes.
 **request-body**
 ```json
 {
-    "client_id": <client-id>,
+    "client_id": "<client-id>",
     "client_secret": "<client_secret>",
     "grant_type": "password",
     "scope": "*",
