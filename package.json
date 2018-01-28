@@ -2,8 +2,6 @@
     "private": true,
     "scripts": {
         "start": "php artisan serve",
-        "vagrant": "vagrant up",
-        "vagrant:destroy": "vagrant destroy --force",
         "dev": "npm run development",
         "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
         "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
@@ -11,7 +9,11 @@
         "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
         "prod": "npm run production",
         "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "preinstall": "composer install"
+        "preinstall": "composer install",
+        "vagrant:init:mac": "php vendor/bin/homestead make",
+        "vagrant:init:win": "vendor\\bin\\homestead make",
+        "vagrant": "vagrant up",
+        "vagrant:destroy": "vagrant destroy --force"
     },
     "devDependencies": {
         "axios": "^0.17",
